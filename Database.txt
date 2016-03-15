@@ -1,0 +1,27 @@
+mysql> create Table verfahrensZO(
+    -> vzID INT UNSIGNED PRIMARY KEY NOT NULL,
+    -> maID INT UNSIGNED NOT NULL,
+    -> rollenID INT UNSIGNED NOT NULL,
+    -> verfahrensID INT UNSIGNED NOT NULL,
+    -> aktiv BOOLEAN DEFAULT TRUE NOT NULL);
+
+_________________________________________________________________________________________________
+mysql> create table mitarbeiter(
+-> mitarbeiterID INT UNSIGNED PRIMARY KEY NOT NULL,
+-> nName varchar(25) NOT NULL,
+-> vName varchar(25) NOT NULL,
+-> telefon varchar(30) NOT NULL,
+-> email varchar(50) NOT NULL);     
+
+__________________________________________________________________________________________________
+
+mysql> create table rollen(
+-> rollenID INT UNSIGNED PRIMARY KEY NOT NULL,
+-> bezeichnung varchar(100) NOT NULL);
+
+
+__________________________________________________________________________________________________
+
+mysql> create table verfahren(
+-> verfahrensID INT UNSIGNED PRIMARY KEY NOT NULL,
+-> verfahrensName varchar(50) NOT NULL);
