@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Anmeldung</title>
+</h:head>
+<body>
+	<f:view>
+		<h:form id="form">
+			<p:panel header ="Hashing-Test">
+				<h:panelGrid colums="2" cellpadding="5">
+					<h:outputLabel for="username" value="Username:"/>
+					<p:inputText id="username" required="true" value="#{userService.user.username}"></p:inputText>
+					
+					<h:outputLabel for="password" value="Password:"/>
+					<p:password id="password" required="true" value="#{userService.user.password}"></p:password>
+					<p:commandButton action="#{userService.printIT}" value="Register" update="@form"/>
+				</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</f:view>
+</body>
+</html>
